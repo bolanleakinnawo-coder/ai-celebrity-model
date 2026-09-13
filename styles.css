@@ -168,21 +168,80 @@ p {
   right: 18px;
   bottom: 90px;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  align-items: flex-end;
+  justify-content: flex-end;
   z-index: 60;
+  pointer-events: none;
 }
 .live-toast {
+  position: absolute;
+  right: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
   gap: 10px;
-  max-width: 280px;
-  background: rgba(255, 255, 255, 0.94);
+  width: 280px;
+  background: rgba(255, 255, 255, 0.96);
   border: 1px solid rgba(124, 92, 255, 0.08);
   border-radius: 999px;
   padding: 8px 12px;
   box-shadow: 0 12px 20px rgba(20, 20, 28, 0.08);
   backdrop-filter: blur(6px);
+  opacity: 0;
+  transform: translateY(18px) scale(0.96);
+  animation: toast-pop 18s ease-in-out infinite;
+}
+.live-toast:nth-child(1) {
+  animation-delay: 0s;
+}
+.live-toast:nth-child(2) {
+  animation-delay: 1.8s;
+}
+.live-toast:nth-child(3) {
+  animation-delay: 3.6s;
+}
+.live-toast:nth-child(4) {
+  animation-delay: 5.4s;
+}
+.live-toast:nth-child(5) {
+  animation-delay: 7.2s;
+}
+.live-toast:nth-child(6) {
+  animation-delay: 9s;
+}
+.live-toast:nth-child(7) {
+  animation-delay: 10.8s;
+}
+.live-toast:nth-child(8) {
+  animation-delay: 12.6s;
+}
+.live-toast:nth-child(9) {
+  animation-delay: 14.4s;
+}
+.live-toast:nth-child(10) {
+  animation-delay: 16.2s;
+}
+@keyframes toast-pop {
+  0%,
+  8% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+  }
+  10%,
+  18% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  22%,
+  78% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  82%,
+  100% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.96);
+  }
 }
 .toast-avatar {
   width: 30px;
