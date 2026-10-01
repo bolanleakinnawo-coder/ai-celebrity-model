@@ -2,27 +2,42 @@
 <html lang="en">
   <head>
     <!-- Snap Pixel Code -->
-    <script type="text/javascript">
-      (function (e, t, n) {
-        if (e.snaptr) return;
-        var a = (e.snaptr = function () {
-          a.handleRequest
-            ? a.handleRequest.apply(a, arguments)
-            : a.queue.push(arguments);
-        });
-        a.queue = [];
-        var s = "script";
-        r = t.createElement(s);
-        r.async = !0;
-        r.src = n;
-        var u = t.getElementsByTagName(s)[0];
-        u.parentNode.insertBefore(r, u);
-      })(window, document, "https://sc-static.net/scevent.min.js");
-
-      snaptr("init", "a4f97b75-e8c9-4f43-b0a4-313d48db7b0b", {});
-
-      snaptr("track", "PAGE_VIEW");
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+      fbq("init", "1096209053390092");
+      fbq("track", "PageView");
     </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1096209053390092&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
     <!-- End Snap Pixel Code -->
 
     <meta charset="UTF-8" />
